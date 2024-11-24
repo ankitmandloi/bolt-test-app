@@ -72,7 +72,7 @@ def get_available_resolutions(url):
 
 
 # Serve the HTML page
-@app.route('/')
+@app.route('/ytd')
 def home():
     html_content = """
     <!DOCTYPE html>
@@ -360,4 +360,4 @@ def get_resolutions():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=8091, threaded=True)
