@@ -360,4 +360,6 @@ def get_resolutions():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8091, threaded=True)
+    # Specify the paths to your certificate and key files
+    ssl_context = ('server.crt', 'server.key')  # Replace with your paths if different
+    app.run(host="0.0.0.0", port=8091, threaded=True, ssl_context=ssl_context)
